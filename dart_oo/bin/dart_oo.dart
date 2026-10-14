@@ -10,6 +10,7 @@ void main(List<String> arguments) {
   ];
   final book = GradeBook(students);
 
+  book.log('统计开始'); // mixin Logger 提供的 log 方法
   print('===== 课程成绩册统计 =====');
   print('平均分：${book.average}');
   print('最高分：${book.maxBy}');

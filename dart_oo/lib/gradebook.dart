@@ -1,7 +1,12 @@
 import 'student.dart';
 
+/// 日志能力 mixin：任何类都可混入，无须构成继承关系
+mixin Logger {
+  void log(String msg) => print('[$runtimeType] $msg');
+}
+
 /// 成绩册：内部持有学生列表，构造时接收列表
-class GradeBook {
+class GradeBook with Logger {
   final List<Student> _students;
 
   GradeBook(this._students);
